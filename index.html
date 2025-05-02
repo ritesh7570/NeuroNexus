@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylish Contact Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(to right, #cce0f5, #e6f0ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-box {
+      background: #ffffffee;
+      padding: 30px 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #333;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin: 14px 0 6px;
+      color: #222;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #5a6ff0;
+      outline: none;
+      background-color: #ffffff;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+    }
+
+    .radio-group input {
+      margin-right: 6px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background-color: #5a6ff0;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3e4fc5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <h2>Registration Form</h2>
+    <form>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="phone">Contact Number</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" required>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <label for="company">Company Name</label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="department">Department</label>
+      <select id="department" name="department" required>
+        <option value="">-- Select Department --</option>
+        <option>HR</option>
+        <option>Sales</option>
+        <option>Development</option>
+        <option>Marketing</option>
+        <option>Others</option>
+      </select>
+
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="prefer-not"> Prefer not to say</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
